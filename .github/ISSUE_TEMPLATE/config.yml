@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/NoyaraAI/Noyara/security/advisories/new
+    about: Report vulnerabilities privately; never include secrets in a public issue.
+  - name: Get support
+    url: https://github.com/NoyaraAI/Noyara/blob/main/SUPPORT.md
+    about: Read the support guide before opening an issue.

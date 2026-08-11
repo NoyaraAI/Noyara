@@ -1,0 +1,9 @@
+.git
+.github
+.expo
+.env*
+node_modules
+dist
+ios
+android
+npm-debug.log*
