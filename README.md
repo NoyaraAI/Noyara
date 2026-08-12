@@ -1,5 +1,3 @@
-<!-- generated-by: gsd-doc-writer -->
-
 <div align="center">
   <img src="./assets/images/icon.png" alt="Noyara" width="120" />
   <h1>Noyara</h1>
@@ -44,6 +42,8 @@ npm run web
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines. Report security vulnerabilities privately as described in [SECURITY.md](SECURITY.md).
+
+Agent-assisted contributions follow [AGENTS.md](AGENTS.md). The repository includes project-local skills for truthful prose, recurring-friction capture, merge-ready review, and official Expo framework guidance.
 
 ## Community
 

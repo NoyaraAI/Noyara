@@ -18,8 +18,7 @@ jobs:
           node-version: 22.13
           cache: npm
       - run: npm ci
-      - run: npx tsc --noEmit
-      - run: npx expo export --platform web
+      - run: npm run check
 
   links:
     runs-on: ubuntu-latest
