@@ -2,15 +2,18 @@
   "name": "noyara",
   "main": "expo-router/entry",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=22.13"
+  },
   "dependencies": {
-    "@expo/ui": "~57.0.8",
+    "@expo/ui": "~57.0.11",
     "expo": "~57.0.9",
     "expo-constants": "~57.0.8",
     "expo-device": "~57.0.1",
     "expo-font": "~57.0.1",
     "expo-glass-effect": "~57.0.1",
     "expo-image": "~57.0.1",
-    "expo-linking": "~57.0.4",
+    "expo-linking": "~57.0.5",
     "expo-router": "~57.0.9",
     "expo-splash-screen": "~57.0.5",
     "expo-status-bar": "~57.0.1",
@@ -29,15 +32,20 @@
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
+    "eslint": "^9.39.5",
+    "eslint-config-expo": "~57.0.1",
     "typescript": "~6.0.3"
   },
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "typecheck": "tsc --noEmit",
+    "export:web": "expo export --platform web",
+    "check": "npm run lint && npm run typecheck && npm run export:web"
   },
   "private": true
 }

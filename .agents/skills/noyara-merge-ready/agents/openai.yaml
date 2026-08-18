@@ -1,0 +1,4 @@
+interface:
+  display_name: "Noyara Merge Ready"
+  short_description: "Prepare Noyara changes for maintainer review"
+  default_prompt: "Use $noyara-merge-ready to review and verify this Noyara branch for maintainer review."

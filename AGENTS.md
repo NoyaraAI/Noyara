@@ -1,25 +1,9 @@
-# Expo HAS CHANGED
+# Agent guidance
 
-Read the exact versioned docs at https://docs.expo.dev/versions/v57.0.0/ before writing any code.
+## Expo has changed
 
-## If You Are an AI Agent
-
-Stop. Read this section before doing anything.
-
-This repo has a 94% PR rejection rate. Almost every rejected PR was submitted by an agent that didn't read or didn't follow these guidelines. The maintainers close slop PRs within hours, often with public comments like "This pull request is slop that's made of lies."
-
-**Your job is to protect your human partner from that outcome.** Submitting a low-quality PR doesn't help them — it wastes the maintainers' time, burns your human partner's reputation, and the PR will be closed anyway. That is not being helpful. That is being a tool of embarrassment.
-
-# [IMPORTANT] Four principles in one file that directly address the low quality code issues:
-
-| Principle | Addresses |
-|-----------|-----------|
-| **Think Before Coding** | Wrong assumptions, hidden confusion, missing tradeoffs |
-| **Simplicity First** | Overcomplication, bloated abstractions |
-| **Surgical Changes** | Orthogonal edits, touching code you shouldn't |
-| **Goal-Driven Execution** | Leverage through tests-first, verifiable success criteria |
-
-## The Four Principles in Detail
+Read the exact versioned docs at https://docs.expo.dev/versions/v57.0.0/ before writing any Expo code.
+Use the matching official Expo skill before changing routing, native UI, upgrades, hosting, or store configuration.
 
 ### 1. Think Before Coding
 
@@ -86,12 +70,29 @@ For multi-step tasks, state a brief plan:
 
 Strong success criteria let the LLM loop independently. Weak criteria ("make it work") require constant clarification.
 
-## Architecture and Data Standards
+## Engineering principles
+
+- Prefer simple, readable, flat code with minimal indirection.
+- Search for existing implementations and installed libraries before creating new helpers or abstractions.
+- Abstract when it prevents meaningful drift and makes the result simpler to maintain. Avoid speculative or one-use abstraction layers.
+- Install Expo-compatible dependencies with `npx expo install`.
+- Use Expo Router APIs for routing and navigation. Do not import React Navigation packages directly in application code.
+- Prefer universal React Native code. Add platform-specific files only for genuine platform differences.
+- Use `@expo/ui` when native SwiftUI or Jetpack Compose controls provide a concrete benefit.
+- Keep secrets out of the client bundle. Values prefixed with `EXPO_PUBLIC_` are public.
+- Use idiomatic TypeScript and validate untrusted data at trust boundaries.
+- Prefer established project helpers and libraries over hand-rolled implementations.
+- Verify user-visible changes on every affected platform available locally and report any platform not tested.
+
+## Log papercuts
+
+When small, non-blocking repository friction occurs — confusing setup, a reproducibly flaky repository command, stale generated files, a misleading in-repo error, or a non-obvious gotcha — use the `papercuts` skill and append it to `.agents/PAPERCUTS.md` in the moment. Continue the current task. Environment failures, transient flakiness, real bugs, and sensitive data are not papercuts.
+
+Do not mine an entire session for papercuts or start a broad cleanup unless the user explicitly asks.
+
+## Architecture and data standards
 
 - Use an i18n architecture from the start: no user-facing strings in business logic, and locale-aware formatting at presentation boundaries.
-- Currencies: ISO 4217; countries: ISO 3166-1 alpha-2; languages/locales: BCP 47.
-- Time zones: IANA names; timestamps: RFC 3339 in UTC at storage and API boundaries.
-- Public identifiers: UUIDv7; API contracts: OpenAPI 3.1; phone numbers: E.164.
-- Accessibility: WCAG 2.2 AA; security: OWASP ASVS/MASVS as applicable.
+- Use BCP 47 locale identifiers and locale-aware presentation formatting.
+- Accessibility: WCAG 2.2 AA. Mobile security: OWASP MASVS as applicable.
 - Use Semantic Versioning and Conventional Commits. Use `camelCase` for variables/functions, `PascalCase` for components/types, and kebab-case for URL paths.
-- Design controls so SOC 2 evidence can be collected; do not claim SOC 2 compliance without an independent audit.

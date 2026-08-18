@@ -12,19 +12,18 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: 22.13
           cache: npm
       - run: npm ci
-      - run: npx tsc --noEmit
-      - run: npx expo export --platform web
+      - run: npm run check
 
   links:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --verbose './**/*.md'
+          args: --no-progress --verbose --exclude 'https://www\.linkedin\.com/.*' './**/*.md'

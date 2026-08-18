@@ -1,56 +1,58 @@
-# Welcome to your Expo app 👋
+<div align="center">
+  <img src="./assets/images/icon.png" alt="Noyara" width="120" />
+  <h1>Noyara</h1>
+  <p>A cross-platform application built with Expo and React Native.</p>
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<p align="center">
+  <a href="https://github.com/NoyaraAI/Noyara">
+    <img src="https://img.shields.io/badge/Repository-Noyara-FFD700?style=for-the-badge&logo=github&logoColor=white" alt="Noyara Repository">
+  </a>
+  <a href="https://discord.gg/q9QK3F7wW">
+    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
+  </a>
+  <a href="https://github.com/NoyaraAI/Noyara/blob/development/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT">
+  </a>
+  <a href="https://github.com/AppajiDheeraj">
+    <img src="https://img.shields.io/badge/Built%20by-Appaji%20Dheeraj-blueviolet?style=for-the-badge" alt="Built by Appaji Dheeraj">
+  </a>
+</p>
 
-## Get started
+</div>
 
-1. Install dependencies
+## Getting started
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Requires Node.js 22.13 or later.
 
 ```bash
-npm run reset-project
+git clone https://github.com/NoyaraAI/Noyara.git
+cd Noyara
+npm ci
+npm start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Run a specific platform:
 
-### Other setup steps
+```bash
+npm run android
+npm run ios
+npm run web
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+## Contributing
 
-## Learn more
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines. Report security vulnerabilities privately as described in [SECURITY.md](SECURITY.md).
 
-To learn more about developing your project with Expo, look at the following resources:
+Agent-assisted contributions follow [AGENTS.md](AGENTS.md). The repository includes project-local skills for truthful prose, recurring-friction capture, merge-ready review, and official Expo framework guidance.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Community
 
-## Join the community
+Join the [Noyara Discord](https://discord.gg/q9QK3F7wW).
 
-Join our community of developers creating universal apps.
+## Built by
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+[Appaji Dheeraj](https://github.com/AppajiDheeraj) · [LinkedIn](https://www.linkedin.com/in/appaji-dheeraj/) · [X](https://x.com/AppajiDheeraj)
+
+## License
+
+Licensed under the [MIT License](LICENSE).
